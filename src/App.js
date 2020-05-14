@@ -1,13 +1,16 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
-import Main from 'components/Main';
+import { TeamMember, TeamMembers } from 'components';
 
 function App() {
   return (
     <div className='App'>
       <BrowserRouter>
-        <Main />
+        <Switch>
+          <Route path='/team-members/:id' component={TeamMember} exact />
+          <Route path='/' component={TeamMembers} exact />
+        </Switch>
       </BrowserRouter>
     </div>
   );

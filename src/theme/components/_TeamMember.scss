@@ -13,4 +13,21 @@
       }
     }
   }
+
+  &__Form {
+    margin-top: 2rem;
+
+    label {
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+
+    input {
+      border-radius: 4px;
+      outline: none;
+      border: 1px solid #CCC;
+      padding: 0.5rem;
+      width: 100%;
+    }
+  }
 }

@@ -17,3 +17,12 @@ export const TEAM_MEMBER = gql`
     }
   }
 `;
+
+export const UPDATE_NAME = gql`
+  mutation UpdateName($id: Int!, $name: String!) {
+    updateName(id: $id, name: $name) {
+      id
+      name
+    }
+  }
+`;
