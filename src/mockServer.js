@@ -1,5 +1,13 @@
 import teamMembers from 'teamMembers';
 
+const resolveRequest = value => (
+ new Promise((resolve, _reject) => {
+    setTimeout(() => {
+      resolve(value);
+    }, 3000);
+  })
+);
+
 export const typeDefs = `
   type Query {
     teamMembers: [TeamMember!]
@@ -14,7 +22,7 @@ export const typeDefs = `
 
 export const resolvers = {
   Query: {
-    teamMembers: () => teamMembers,
-    teamMember: (parent, { id }) => teamMembers.find(member => member.id === id)
+    teamMembers: () => resolveRequest(teamMembers),
+    teamMember: (parent, { id }) => resolveRequest(teamMembers.find(member => member.id === id))
   }
 }

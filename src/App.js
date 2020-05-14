@@ -1,15 +1,14 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
-import { Main, Cache } from 'components';
+import Main from 'components/Main';
 
 function App() {
   return (
     <div className='App'>
-      <Main />
-
-      <div className='App__Divider' />
-
-      <Cache />
+      <BrowserRouter>
+        <Main />
+      </BrowserRouter>
     </div>
   );
 }
