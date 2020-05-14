@@ -1,9 +1,15 @@
 import React from 'react';
 
+import { Main, Cache } from 'components';
+
 function App() {
   return (
     <div className='App'>
-      UI Apollo Demo
+      <Main />
+
+      <div className='App__Divider' />
+
+      <Cache />
     </div>
   );
 }
