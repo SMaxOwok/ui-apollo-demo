@@ -11,6 +11,7 @@
     "apollo-client": "^2.6.10",
     "apollo-link-schema": "^1.2.5",
     "graphql": "^15.0.0",
+    "graphql-tag": "^2.10.3",
     "graphql-tools": "^5.0.0",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
